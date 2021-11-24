@@ -36,4 +36,6 @@ When redering list in JSX, use map! And remember to have unique key for each chi
 ```
 const songs = [{id:1, name:"piggie"}, {id:2, name:"doggie"}, {id:3, name:"kitty"}]
 ```
->`songs.map(item => <li key={item.id}>{item.name}<li>)`
+```
+songs.map(item => <li key={item.id}>{item.name}<li>)
+```
