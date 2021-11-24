@@ -71,13 +71,13 @@ render(){
 }
 ```
 ### Extract components into single file
-1.Create Hello.js  
+1. Create Hello.js  
 
-2.Import React in Hello.js  
+2. Import React in Hello.js  
 
-3.Create components  
+3. Create components  
 
-4.Export component in Hello.js  
+4. Export component in Hello.js  
 
 Example: 
 ```
