@@ -50,7 +50,5 @@ const songs = [
 ```
 ```
 songs.map(item => 
-<li key={item.id}>
-{item.name}
-<li>)
+<li key={item.id}>{item.name}<li>)
 ```
