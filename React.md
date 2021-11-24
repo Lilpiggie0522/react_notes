@@ -15,6 +15,18 @@ The reason is that Create-react-app has placed babel internally to compile JSX t
 
 ### React elements with no child-node can use /> to end directly. Note that this is only a JSX feature, don't do it in normal HTML.
 
-Examle: `<h1>Hello Jsx</span></h1>`
+Examle: `<h1>Hello Jsx<span /></h1>`
 
 ### Use () to wrap JSX up. This prevents auto inserting of ; in JS.
+
+# Using JS expressions in JSX
+`const name = Jack`
+`const dv = (<div>Hello, my name is{name})</div>`
+
+### JSX Conditional rendering
+`const loadData = ()=>{if(isLoading){return(<div></div>)}}`
+**Code using ternary operator** `const loadData = ()=>{isLoading?(<div>Loading...</div>):(<div>Not loading</div>)}`
+
+### && Operator Logic AND AND
+Returns the **second operand** if the operand does not return true or false.
+`const loadData = () => {return isLoading && <h1>Loading...</h1>}`
