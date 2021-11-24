@@ -41,11 +41,14 @@ const Hello = () =>(<div></div>)
 ```
 
 ### 3.Creating React components using Class Names
-Class components: Components created by ES6 Classes
-Class name also needs to start with uppercase letters
-Class components inherits React.Component parent class
-Class components must provide render()
-render() must have return statement
+Class components: Components created by ES6 Classes  
+
+Class name also needs to start with uppercase letters  
+
+Class components inherits React.Component parent class  
+
+Class components must provide render()  
+render() must have return statement  
 
 Example:
 ```
