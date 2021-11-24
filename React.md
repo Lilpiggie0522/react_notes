@@ -32,6 +32,6 @@ Returns the **second operand** if the operand does not return true or false.
 `const loadData = () => {return isLoading && <h1>Loading...</h1>}`
 
 ### List rendering in JSX
->When redering list in JSX, use map! And remember to have unique key for each child element created by mapping.
-`const songs = [{id:1, name:"piggie"}, {id:2, name:"doggie"}, {id:3, name:"kitty"}]`
-`songs.map(item => <li key={item.id}>{item.name}<li>)`
+When redering list in JSX, use map! And remember to have unique key for each child element created by mapping.
+>`const songs = [{id:1, name:"piggie"}, {id:2, name:"doggie"}, {id:3, name:"kitty"}]`
+>`songs.map(item => <li key={item.id}>{item.name}<li>)`
