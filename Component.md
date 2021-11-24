@@ -41,14 +41,15 @@ const Hello = () =>(<div></div>)
 ```
 
 ### 3.Creating React components using Class Names
-Class components: Components created by ES6 Classes  
+>Class components: Components created by ES6 Classes  
 
-Class name also needs to start with uppercase letters  
+>Class name also needs to start with uppercase letters  
 
-Class components inherits React.Component parent class  
+>Class components inherits React.Component parent class  
 
-Class components must provide render()  
-render() must have return statement  
+>Class components must provide render()  
+
+>render() must have return statement  
 
 Example:
 ```
@@ -62,16 +63,21 @@ class Hello extends React.Component{
 
 ReactDOM.render(<Hello />, document.getElementsById("root"));
 ```
-**Note that** render() is written as:
->render(){
+
+>**Note that** render() is written as:
+```
+render(){
     (<div></div>)
 }
-
+```
 ### Extract components into single file
->1.Create Hello.js
->2.Import React in Hello.js
->3.Create components
->4.Export component in Hello.js
+>1.Create Hello.js  
+
+>2.Import React in Hello.js  
+
+>3.Create components  
+
+>4.Export component in Hello.js  
 
 Example: 
 ```
