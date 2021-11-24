@@ -25,7 +25,7 @@ Examle: `<h1>Hello Jsx<span /></h1>`
 
 ### JSX Conditional rendering
 `const loadData = ()=>{if(isLoading){return(<div></div>)}}`
-**Code using ternary operator** `const loadData = ()=>{isLoading?(<div>Loading...</div>):(<div>Not loading</div>)}`
+> **Code using ternary operator** `const loadData = ()=>{isLoading?(<div>Loading...</div>):(<div>Not loading</div>)}`
 
 ### && Operator Logic AND AND
 Returns the **second operand** if the operand does not return true or false.
