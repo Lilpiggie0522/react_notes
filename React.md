@@ -20,16 +20,24 @@ Examle: `<h1>Hello Jsx<span /></h1>`
 ### Use () to wrap JSX up. This prevents auto inserting of ; in JS.
 
 # Using JS expressions in JSX
-`const name = Jack`
-`const dv = (<div>Hello, my name is{name})</div>`
+```
+const name = Jack
+```
+```
+const dv = (<div>Hello, my name is{name})</div>
+```
 
 ### JSX Conditional rendering
-`const loadData = ()=>{if(isLoading){return(<div></div>)}}`
+```
+const loadData = ()=>{if(isLoading){return(<div></div>)}}
+```
 > **Code using ternary operator** `const loadData = ()=>{isLoading?(<div>Loading...</div>):(<div>Not loading</div>)}`
 
 ### && Operator Logic AND AND
 Returns the **second operand** if the operand does not return true or false.
-`const loadData = () => {return isLoading && <h1>Loading...</h1>}`
+```
+const loadData = () => {return isLoading && <h1>Loading...</h1>}
+```
 
 ### List rendering in JSX
 When redering list in JSX, use map! And remember to have unique key for each child element created by mapping.
