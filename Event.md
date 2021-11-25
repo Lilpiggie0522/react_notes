@@ -25,3 +25,18 @@ class Event extends react.component{
 
 export default Event  
 ```  
+### Function components adding events
+
+Example:
+```
+import react from "react";  
+function Event(){
+    function handleClick(){
+        document.getElementsByTagName("button")[0].style.color = "red";
+        console.log("Click by function components triggered!")
+    }
+    return(
+        <button onClick={handleClick}>click here!</button>
+    )
+}
+```
