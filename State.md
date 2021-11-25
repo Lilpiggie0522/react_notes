@@ -51,4 +51,37 @@ constructor(){
     }
 }
 ```
->The short way of calling constructor method after ES6 is recommended.  
+>The short way of calling constructor method after ES6 is recommended here.  
+
+
+# State and setState in components
+### setState() changing state
+
+Example
+```
+import react from "react";
+
+class State extends react.Component{
+
+    state = {
+        count: 10;
+    }
+
+    render(){
+        return(
+            <div>
+            <h1>Counter: {this.state.count}</h1>
+            <button onClick = {()={
+                this.setState({
+                    count: this.state.count +1,
+                })
+            }}></button>
+            </div>
+            )
+    }
+}
+
+export default State;
+```
+>Note that  
+>In `state = {count: 10}`, **state** is a React Keyword, if replced by any other words, it will not work.  
