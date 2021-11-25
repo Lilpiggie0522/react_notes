@@ -8,7 +8,8 @@ on + Event Name = {Event handling program}, such as **onClick = {() => {}}**
 ### Class components event adding
 Example:  
 
-```import react from "react";
+```  
+import react from "react";
 class Event extends react.component{
     handleClick(){
         console.log("Click event triggered")
