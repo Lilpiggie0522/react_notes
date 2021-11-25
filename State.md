@@ -20,10 +20,12 @@ Example:
 
 import react from "react";
 
-class StatePrac(){
+class StatePrac(){  
+
     state = {
         count: 10;
     }
+
     render(){
         return(
             <div><h1>Counter: {this.state.count}</h1></div>
@@ -39,4 +41,13 @@ import State from './State';
 ReactDOM.render(
   <State />, document.getElementById('root')
 );
+```  
+>Note that constructor state = {count:10} is identical to  
+```
+constructor(){
+    super();
+    this.state = {
+        count:10,
+    }
+}
 ```
