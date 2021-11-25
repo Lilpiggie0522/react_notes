@@ -31,6 +31,6 @@ class State extends react.Component{
 ```
 >Note that when extracting JavaScript from JSX into a method, In `{this.handleClick}`, the "this" here refers to the global object (main browser window), but when `<h1 onClick={this.handleClick}>` is executed `handleClick()` is not called, therefore according to the this pointer rule, whoever calls the method becomes the this, in this case, nobody has called the handleClick method, therefore this is null, which is undefined.  
 
->"this" in arrow function does not have a default pointed to iteself  
-  
->"this" in a function points to whereever the function is called.
+### "this" in arrow function does not have a default pointed to iteself  
+
+### "this" in a function points to whereever the function is called.
