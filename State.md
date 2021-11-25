@@ -51,3 +51,4 @@ constructor(){
     }
 }
 ```
+>The short way of calling constructor method after ES6 is recommended.  
