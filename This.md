@@ -1,6 +1,6 @@
 # Where this points in events (事件绑定this指向/Точки привязки событий)
 When writing JSX in React, it is necessary to extract JavaScript from JSX code.  
-### Method 1: Use arrow functions
+### Method 1: Use arrow functions in onclick={}
 Example:  
 ```
 class State extends react.Component{
@@ -65,3 +65,5 @@ export default State;
 ```  
 >The key here is the bind() method.  
 >**For example, `this.handleClick = this.handleClick.bind(this)` replaces this in handleClick function to whatever instance you tell it to be. And then assign its value to this.handleClick, it actually can be assigned to any variables but here we have this line of code in the constructor method, therefore, we write `this.handleClick` rather than handleClick**.  
+
+### Method 3: Use arrow function directly in class components instead of onClick = {}
