@@ -40,3 +40,32 @@ function Event(){
     )
 }
 ```
+
+### Event objects
+>The object that is passed to event handling function is called SyntheticEvent, it is an object that contains useful metadata related to the event such as the target element's value  
+
+Example:
+```  
+// In Event_Object.js
+import React from "react";
+
+function Events_Objects(){
+    function handleClick(e){
+        e.preventDefault();
+        console.log(e.target.href);
+    }
+    return(
+        <a href="https://www.google.com" onClick={handleClick}>Click here</a>
+    )
+}
+
+export default Events_Objects
+
+// In Index.js
+
+import EvObject from './Events_Object';  
+
+ReactDOM.render(
+  <EvObject/>, document.getElementById('root')
+);
+```
