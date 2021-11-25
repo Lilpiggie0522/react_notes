@@ -99,5 +99,5 @@ For example:
         </button>
 ```  
 is correct.  
->`this.state.count = 10;` is false  
+>`this.state.count +=1 ;` is false  
 
