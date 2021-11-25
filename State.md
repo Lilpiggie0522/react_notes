@@ -85,3 +85,19 @@ export default State;
 ```
 >Note that  
 >In `state = {count: 10}`, **state** is a React Keyword, if replced by any other words, it will not work.  
+
+The thought here is **Data driven view**.  
+
+>It is also important to know that changing state must use setState()  
+For example:  
+```
+        <button onClick = {()={
+                this.setState({
+                    count: this.state.count +1,
+                })
+            }}>
+        </button>
+```  
+is correct.  
+>`this.state.count = 10;` is false  
+
