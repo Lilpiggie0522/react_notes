@@ -74,4 +74,5 @@ renderList = () => {
 }
 ```  
 >We can also use destructuring to destructure comments in state. Look at the strike through!  
-`~this.state.comments~`
+~this.state.comments~ => `const {comments} = this.state`  
+
