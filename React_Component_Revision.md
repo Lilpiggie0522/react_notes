@@ -1,0 +1,36 @@
+# React component basics
+
+### Render comment list
+1. Initialize comment list data in React state.  
+2. Use map() to loop over each element within the state.  
+3. Add key to each of the <li> created by map().  
+
+Example:  
+>How to make comment list data in react:  
+```
+state = {
+    comments: 
+            [
+                {id:1, name: 'jeff', content: "good!"},
+                {id:2, name: 'tom', content: "thanks!"},
+                {id:1, name: 'chris', content: "hello!"}
+            ],
+}  
+```  
+>Because `this.state.comment` is an array, therefore we use map() to loop it.  
+
+>Note that map() is used like this:  
+```  
+<ul>
+    {
+        this.state.comments.map(item = () =>
+            (
+            <li>
+                <h1>{item.name}</h1>
+                <p>{item.content}</p>
+            </li>
+            )
+        )
+    }  
+</ul>  
+```
