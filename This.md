@@ -67,4 +67,15 @@ export default State;
 >**For example, `this.handleClick = this.handleClick.bind(this)` replaces this in handleClick function to whatever instance you tell it to be. And then assign its value to this.handleClick, it actually can be assigned to any variables but here we have this line of code in the constructor method, therefore, we write `this.handleClick` rather than handleClick**.  
 
 ### Method 3: Use arrow function directly in class components instead of onClick = {}
+
+Example:
+```
+handleClick= () => {
+    this.setState(
+        {
+            count: this.state.count +1
+        }
+    )
+}
+```
 >Note that this method is recommended
