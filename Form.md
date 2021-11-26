@@ -87,6 +87,25 @@ class Form extends react.Component{
 
 export default Form
 ```   
+### Non controlled components getting values from elements
+Example:  
+```
+constructor(){
+    super()
+    this.state = {
+        reftxt: "",
+    }
+    this.txtRef = react.createRef()
+}
+getTxt =()=>{
+    this.setState({
+        reftxt: this.state.reftxt,
+    })
+    console.log(this.txtRef.current.value)
+}
+<button ref={this.txtRef} onClick={this.getTxt}>getTxt</button>
+```  
+>Note that it is `this.txtRef.current.value`!  
 
 
 
