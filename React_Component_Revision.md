@@ -33,4 +33,45 @@ state = {
         )
     }  
 </ul>  
+```  
+
+### Conditional rendering
+Use ternary operator to determine if there is data within this.state.comment, if not, render  
+"No comments yet, post comments!". If there is, render out all comments.  
+
+Example:  
 ```
+{this.state.comments.length === 0
+? <div>No comments yet, post comments!</div>
+: this.state.comments.map(item = () =>
+            (
+            <li>
+                <h1>{item.name}</h1>
+                <p>{item.content}</p>
+            </li>
+            )
+        )
+}
+```  
+>However, this JSX code tangled with JavaScript code does not seem to look well structure wise, therefore, a way to optimize it is needed.  
+
+### Optimize the JSX code  
+We optimize the code by extracting all the content of ternary operator into a method. 
+Example:  
+```
+renderList = () => {
+    return this.state.comments.length === 0
+    ? <div>No comments yet, post comments!</div>
+    : this.state.comments.map(item = () =>
+            (
+            <li>
+                <h1>{item.name}</h1>
+                <p>{item.content}</p>
+            </li>
+            )
+        )
+}
+}
+```  
+>We can also use destructuring to destructure comments in state. Look at the strike through!  
+`~this.state.comments~`
