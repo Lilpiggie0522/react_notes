@@ -231,3 +231,60 @@ const Child2 = (props) => {
 >The key here is to create a state in parent component and a method to modify state. Then have a property in the child component tag who is passing the value to the parent. Use this property to call the method such as `{this.getIncrement}`. Finally, have an onClick or similar type of event listener in child component and bound a method to this event listener. This method will access the property setup to access the method created by parent component. This will call the method in parent component and update the state prepared to receive the value that is being passed.  
 
 >In short words, the key here is to update the parent's state using a method provided by parent from child components.  
+
+### Transfer data from any components easily
+`const {Provider, Consumer} = react.createContext();`  
+>// this needs to be written outside the components so that all child and parent components have access.  
+>Wrap up parent component using `<Provider></Provider>`in the return method of parent component and wrap up child component with `<Consumer></Consumer>`.  
+
+```
+class App extends react.Component{
+  constructor(){
+    super()
+    this.state = {
+      count: 22,
+    }
+  }
+  
+  render(){
+    return(
+      <Provider value="piggie">
+        <div>
+          <Node />
+        </div>
+      </Provider>
+    )
+  }
+}
+
+class Node extends react.Component{
+  render(){
+    return(
+      <div>
+      <Subnode />
+      </div>
+    )
+  }
+}
+
+class Subnode extends react.Component{
+  render(){
+    return(
+      <div>
+      <Child />
+      </div>
+    )
+  }
+}
+
+
+class Child extends react.Component{
+  render(){
+    return(
+      <div>
+      <Consumer>{data => <p>{data}</p>}</Consumer>
+      </div>
+    )
+  }
+}
+```
