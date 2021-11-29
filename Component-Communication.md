@@ -233,8 +233,11 @@ const Child2 = (props) => {
 >In short words, the key here is to update the parent's state using a method provided by parent from child components.  
 
 ### Transfer data from any components easily using Context
+This is usually used when there is multiple layer of components nested on each other.  
+
 `const {Provider, Consumer} = react.createContext();`  
 >// this needs to be written outside the components so that all child and parent components have access.  
+
 >Wrap up parent component using `<Provider></Provider>`in the return method of parent component and wrap up child component with `<Consumer></Consumer>`.  
 
 ```
@@ -290,3 +293,90 @@ class Child extends react.Component{
   }
 }
 ```
+
+### Children property
+If a tag has a node within, then it automatically has children property.  
+
+Example:  
+```
+class App extends react.Component{
+  render(){
+    return(
+      <div>
+        <h1>Components Subnode:{this.props.children}</h1>
+      </div>
+    )
+  }
+}
+
+class Node extends react.Component{
+  render(){
+    return(
+      <div>
+        dim sim piggie
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(
+  <App><Node/></ App>, document.getElementById('root')
+);
+```  
+>Note that children can be an arrow function, example:  
+```
+class App extends react.Component{
+
+  render(){
+    console.log(this.props)
+
+    return(
+      <div>
+        <h1>Components Subnode:{this.props.children()}</h1>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(
+  <App>
+    {
+      () => {
+        console.log("this is a function");
+      }
+    }
+    </ App>, document.getElementById('root')
+);
+```
+
+### Props verification
+1. Install package prop-types `yarn add prop-types`  
+2. Import prop-types `import Proptypes from 'prop-types';`  
+3. Use `ComponentName.propTypes = {}` to add verification rules for components  
+
+Example:  
+```
+import Proptypes from 'prop-types';
+
+class App extends react.Component{
+ 
+  arr = this.props.colors;
+  lis = this.arr.map((item, index) => <li key={index}>{item.name}</li>)
+
+  render(){
+    return(
+        <ul>{this.lis}</ul>
+    )
+  }
+
+  App.propTypes = {
+      colors: Proptypes.array,
+  }
+}
+```
+# Props verification type
+1. Common types: array, bool, func, number, object, string
+2. React elements
+3. Must haves: isRequired
+4. Objects with specific structure
+
