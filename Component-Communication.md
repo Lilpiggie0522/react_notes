@@ -380,3 +380,4 @@ class App extends react.Component{
 3. Must haves: isRequired
 4. Objects with specific structure
 
+>For more info, see[react](https://reactjs.org/docs/typechecking-with-proptypes.html)  
