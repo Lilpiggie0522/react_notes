@@ -381,3 +381,5 @@ class App extends react.Component{
 4. Objects with specific structure
 
 >For more info, see [Type checking with PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)  
+
+**Note that the syntax here for type check is `App.proptypes={name: "piggie", birthday: 1995}`**
