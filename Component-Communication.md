@@ -182,3 +182,52 @@ ReactDOM.render(
   <Parent />, document.getElementById('root')
 );
 ```
+
+### Child to Child data transfer  
+Child transfers data to Parent that is directly above it, then parent transfers data to the other child that needs the data.  
+
+Example:  
+```
+class Counter extends react.Component{
+  state = {
+    count: 0,
+  }
+
+  getIncrement = () =>{
+    this.setState({
+      count: this.state.count+1,
+    })
+    console.log("+1")
+  }
+
+  render(){
+    return(
+      <div>
+        <Child1 count={this.state.count}/>
+        <Child2 setIncrement={this.getIncrement}/>
+      </div>
+    )
+  }
+}
+
+const Child1 = (props) => {
+ 
+  return(
+    <p>Counter:{props.count} </p>
+  )
+}
+
+const Child2 = (props) => {
+  const gg = () =>{
+    props.setIncrement()
+    console.log("props: ", props)
+  }
+
+  return(
+    <button onClick={gg}>+1</button>
+  )
+}
+```
+>The key here is to create a state in parent component and a method to modify state. Then have a property in the child component tag who is passing the value to the parent. Use this property to call the method such as `{this.getIncrement}`. Finally, have an onClick or similar type of event listener in child component and bound a method to this event listener. This method will access the property setup to access the method created by parent component. This will call the method in parent component and update the state prepared to receive the value that is being passed.  
+
+>In short words, the key here is to update the parent's state using a method provided by parent from child components.  
