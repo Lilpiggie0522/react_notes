@@ -232,12 +232,14 @@ const Child2 = (props) => {
 
 >In short words, the key here is to update the parent's state using a method provided by parent from child components.  
 
-### Transfer data from any components easily
+### Transfer data from any components easily using Context
 `const {Provider, Consumer} = react.createContext();`  
 >// this needs to be written outside the components so that all child and parent components have access.  
 >Wrap up parent component using `<Provider></Provider>`in the return method of parent component and wrap up child component with `<Consumer></Consumer>`.  
 
 ```
+const {Provider, Consumer} = react.createContext();
+
 class App extends react.Component{
   constructor(){
     super()
